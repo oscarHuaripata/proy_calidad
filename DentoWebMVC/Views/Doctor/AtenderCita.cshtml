@@ -1,0 +1,74 @@
+﻿
+@model DentoWebMVC.Models.DentoWeb.Historia
+
+@{ ViewData["Title"] = "AtenderCita";
+                Layout = "_Layout"; }
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="mestrada">
+
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+</head>
+
+<body style="background-color:powderblue">
+    <div class="row">
+        <div class="container">
+            <form asp-action="AtenderCita" method="post" class="form-register">
+                <input value="@ViewBag.idCita" name="idCita" hidden />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1 class="text-center text-primary" style="margin-top:0.1%"><strong>Atención de Cita</strong></h1>
+                <div class="form-row">
+
+                    <div class="col-md-12">
+                        <label asp-for="observacion" class="control-label">Observación</label>
+                        <textarea asp-for="observacion" name="observacion" type="text" class="form-control" ></textarea>
+                        <span asp-validation-for="observacion" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="motivo" class="control-label">Motivo</label>
+                        <textarea asp-for="motivo" name="motivo" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="motivo" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="descripcion" class="control-label">Descripción</label>
+                        <textarea asp-for="descripcion" name="descripcion" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="descripcion" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="examenes" class="control-label">Exámenes</label>
+                        <textarea asp-for="examenes" name="examenes" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="examenes" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="diagnostico" class="control-label">Diagnóstico</label>
+                        <textarea asp-for="diagnostico" name="diagnostico" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="diagnostico" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="tratamiento" class="control-label">Tratamiento</label>
+                        <textarea asp-for="tratamiento" name="tratamiento" type="text" class="form-control" ></textarea>
+                        <span asp-validation-for="tratamiento" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group text-center" style="margin-top:3%;margin-bottom:0.5%">
+                    <button type="submit" class="btn btn-success">
+                        <i class="far fa-save"></i> Guardar
+                    </button>
+                    <a class="btn btn-danger far fa-window-close" style="padding:3%"  href="/Doctor/Index">
+                        </> Cancelar
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>

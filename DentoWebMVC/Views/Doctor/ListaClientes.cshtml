@@ -1,0 +1,53 @@
+﻿
+@{ ViewData["Title"] = "ListaClientes";
+                Layout = "_LayoutDoctor"; ; }
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+</head>
+
+<div class="text-center" style="background-color: #1f53c5;width:70%;border-radius:12px;box-shadow:10px;margin-left:15%;font-family:trueno">
+    <h1 style="margin-bottom:2%;color:white;padding:1%"><strong>Listado de Pacientes</strong></h1>
+</div>
+
+<table class="table table-hover" id="ClientesList" style="font-family: trueno">
+    <thead>
+        <tr class="text-center text-uppercase">
+            <th>Código historia</th>
+            <th>Paciente</th>
+            <th>Fecha de nacimiento</th>
+            <th>Dni</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewBag.Clientes)
+        {
+            <tr class="text-center">
+                <td>@item.codigo</td>
+                <td>@item.nombres @item.apellidos </td>
+                <td>@item.fechaNac.ToString("dd-MM-yyyy")</td>
+                <td>@item.dni</td>
+                <td>
+                    <a class="btn btn-primary" href="/Doctor/ListarHistorial?id=@item.idCliente">Ver historial</a>
+                </td>
+            </tr>}
+    </tbody>
+
+</table>
+
+@section Scripts {
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ClientesList').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
+    </script>
+}

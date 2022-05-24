@@ -1,0 +1,402 @@
+﻿@{ Layout = null; }
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="~/images/icon.png" type="image/x-icon" />
+    <title>DentoWeb</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+        <header class="site-navbar light js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">                    
+                    <div class="col-12 col-md-12 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block" style="margin-left: -50%">
+                                <a data-scroll href="#home" style="padding:0.5%;"><img src="~/images/icon.png" height="27" width="27" /></a>
+                                <a data-scroll href="#home" style="margin-right:10%"><img src="~/images/iso.png" height="25" width="165" /></a>
+                                <li><a data-scroll href="#nosotros" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Acerca de nosotros</strong></a></li>
+                                <li style="color: RGB(60,145,240);">|</li>
+                                <li><a data-scroll href="#servicios" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Servicios</strong></a></li>
+                                <li style="color: RGB(60,145,240);">|</li>
+                                <li><a data-scroll href="#personal" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Personal</strong></a></li>
+                                <li style="color: RGB(60,145,240);">|</li>
+                                <li><a data-scroll href="#novedades" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Novedades</strong></a></li>
+                                <li class="has-children">
+                                    <a href="#" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Inicia Sesión</strong></a>
+                                    <ul class="dropdown">
+                                        <li><a href="/auth/Login" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Cliente</strong></a></li>
+                                        <li><a href="/auth/LoginDoctor" class="nav-link" style="-webkit-text-fill-color: RGB(60,145,240);"><strong>Doctor</strong></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3 text-black"></span></a></div>
+
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+
+
+
+        <div class="slide-item overlay" style="background-image: url('images/index_image.jpg');" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <h1 class="heading mb-5">Brindamos las mejores soluciones para su sonrisa</h1>
+                        <div class="col-6 col-xl-5">
+                            <div class="btn btn-light">
+                                <a href="/Auth/LoginSeparar" class="mb-5">
+                                    <strong><span class="text-primary">Separa tu Cita</span></strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top:100px" class="container quick-contact">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="#" class="link-lg d-flex align-items-center">
+                        <span class="icon-phone"></span>
+                        <div>
+                            <span>Llámanos</span>
+                            <strong>(+51) 912123123</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="link-lg d-flex align-items-center">
+                        <span class="icon-envelope"></span>
+                        <div>
+                            <span>Escríbenos</span>
+                            <strong>dentoweb@smile.es</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="link-lg d-flex align-items-center">
+                        <span class="icon-room"></span>
+                        <div>
+                            <span>Visítanos</span>
+                            <strong>Jr. Los Eucaliptos 259</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="site-section" id="nosotros">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p><img src="~/images/about.png" alt="Image" class="img-fluid"></p>
+                    </div>
+                    <div class="col-lg-5 ml-auto">
+                        <span class="subheading">Acerca de nosotros</span>
+                        <h2 class="heading"><strong class="text-primary">Estamos felices de tenerte aquí.</strong></h2>
+                        <p>Nacimos porque creemos en un servicio profesional con trato humano y con la mejor relación calidad precio. Estamos en contra de la masificación de servicios de salud, y apostamos por el trato personal; por ello hemos reunido rigurosamente a profesionales dentistas expertos en cada área dental. </p>
+                        <p><a href="/Home/Contact" class="btn btn-primary">Contáctanos</a> <a href="#" class="btn btn-secondary">Leer más...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section bg-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mr-auto">
+                        <span class="subheading">Nuestra Misión</span>
+                        <h2 class="heading">Nosotros tenemos <strong class="text-primary">la solución </strong>para tu sonrisa</h2>
+                        <p>Satisfacer en forma integral las necesidades de cuidado de la salud oral de nuestros pacientes, mejorando continuamente la calidad de nuestros servicios y la experiencia en nuestras clínicas.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <figure class="video-image">
+                            <a href="https://www.youtube.com/watch?v=wgtVXPx6hHQ" data-fancybox class="btn-play"><span class="icon-play"></span></a>
+                            <img src="~/images/img_3.jpg" alt="Image" class="img-fluid">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section" id="servicios">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-7 mx-auto text-center">
+                        <span class="subheading">Nuestros Servicios</span>
+                        <h2 class="heading"><strong class="text-primary">Nosotros tenemos</strong> la solución</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <a href="#" class="service-v1 text-center">
+                            <span class="flaticon-stethoscope"></span>
+                            <h3>Consulta General</h3>
+                            <p>En DentoWeb, contamos con especialistas de todas las especialidades.</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <a href="#" class="service-v1 text-center">
+                            <span class="flaticon-telephone"></span>
+                            <h3>Servicios Ambulatorios</h3>
+                            <p>En DentoWeb, contamos con especialistas de todas las especialidades.</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <a href="#" class="service-v1 text-center">v
+                            <span class="flaticon-sphygmomanometer"></span>
+                            <h3>Terapia Bucal</h3>
+                            <p>En DentoWeb, contamos con especialistas de todas las especialidades.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="site-section bg-light title-wrap-section" id="personal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto text-center">
+                        <span class="subheading">Nuestro Equipo</span>
+                        <h2 class="heading"><strong class="text-primary">Nuestros Dedicados</strong> Doctores</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section overlap-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="#" class="team">
+                            <img src="~/images/person_1.jpg" alt="Image" class="img-fluid">
+                            <div class="team-inner">
+                                <h3>Dr. Julio Guzmán</h3>
+                                <span>Cirujano Dentista</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="#" class="team">
+                            <img src="~/images/person_2.jpg" alt="Image" class="img-fluid">
+                            <div class="team-inner">
+                                <h3>Dra. Ana Medina</h3>
+                                <span>Cirujano Dentista</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="#" class="team">
+                            <img src="~/images/person_3.jpg" alt="Image" class="img-fluid">
+                            <div class="team-inner">
+                                <h3>Dr. Mike Estrada</h3>
+                                <span>Cirujano Dentista</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-7 mx-auto text-center mb-5">
+                        <span class="subheading">¿Qué dicen nuestros pacientes?</span>
+                        <h2 class="heading"><strong class="text-primary">Pacientes</strong> Felices</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial text-center">
+                            <img src="~/images/patient_1.jpg" alt="Image" class="img-fluid">
+                            <blockquote>
+                                <p class="quote">"Tiene una atención muy profesional y es un ambiente que hace que el paciente se relaje. Deja de ser estresante la cita odontológica.”</p>
+                                <cite class="author">Liseth Díaz</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial text-center">
+                            <img src="~/images/person_2.jpg" alt="Image" class="img-fluid">
+                            <blockquote>
+                                <p class="quote">"Tiene una atención muy profesional y es un ambiente que hace que el paciente se relaje. Deja de ser estresante la cita odontológica.”</p>
+                                <cite class="author">Julio Huamán</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial text-center">
+                            <img src="~/images/person_3.jpg" alt="Image" class="img-fluid">
+                            <blockquote>
+                                <p class="quote">"Tiene una atención muy profesional y es un ambiente que hace que el paciente se relaje. Deja de ser estresante la cita odontológica.”</p>
+                                <cite class="author">Piero Taico</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section" id="novedades">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-lg-7 mx-auto text-center mb-5">
+                        <span class="subheading">Blog más Reciente</span>
+                        <h2 class="heading"><strong class="text-primary">Noticias </strong> & Seminarios</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="~/images/img_1.jpg" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span>
+                                    <span class="icon-calendar"></span>
+                                    <span>23 Jul</span>
+                                </span>
+                                <span>
+                                    <span class="icon-user"></span>
+                                    <span>Julio</span>
+                                </span>
+                                <span>
+                                    <span class="icon-comment"></span>
+                                    <span>2 Comments</span>
+                                </span>
+                            </div>
+                            <h2><a href="#">Nosotros proporcionamos una atención de calidad</a></h2>
+                            <p>Utilizamos técnicas nuevas y seguras sin dolor para crear maravillosas y naturales transformaciones en un tiempo mínimo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="~/images/img_2.jpg" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span>
+                                    <span class="icon-calendar"></span>
+                                    <span>23 Jul</span>
+                                </span>
+                                <span>
+                                    <span class="icon-user"></span>
+                                    <span>Mike</span>
+                                </span>
+                                <span>
+                                    <span class="icon-comment"></span>
+                                    <span>2 Comments</span>
+                                </span>
+                            </div>
+                            <h2><a href="#">Nosotros proporcionamos una atención de calidad</a></h2>
+                            <p>Utilizamos técnicas nuevas y seguras sin dolor para crear maravillosas y naturales transformaciones en un tiempo mínimo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="blog-entry">
+                            <a href="#" class="d-block">
+                                <img src="~/images/img_3.jpg" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-meta d-flex justify-content-center">
+                                <span>
+                                    <span class="icon-calendar"></span>
+                                    <span>23 Jul</span>
+                                </span>
+                                <span>
+                                    <span class="icon-user"></span>
+                                    <span>Ana</span>
+                                </span>
+                                <span>
+                                    <span class="icon-comment"></span>
+                                    <span>2 Comments</span>
+                                </span>
+                            </div>
+                            <h2><a href="#">Nosotros proporcionamos una atención de calidad</a></h2>
+                            <p>
+                                Utilizamos técnicas nuevas y seguras sin dolor para crear maravillosas y naturales transformaciones en un tiempo mínimo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </footer>
+
+    </div> <!-- .site-wrap -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿
+@model DentoWebMVC.Models.DentoWeb.Cliente
+
+@{
+    ViewData["Title"] = "EditarPaciente";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="mestrada">
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+</head>
+
+
+<body style="background-image: url(https://gacetadental.com/wp-content/uploads/2019/09/dentista-paciente-1280x720.jpg); background-size:cover;">
+    <div class="row">
+        <div class="container">
+            <form method="post" action="/Cliente/EditarPaciente" style="padding-left:30%;padding-right:30%;padding-top:2%">
+                <input type="hidden" name="idCliente" value="@ViewBag.Id"/>
+                <div class=" controls form-row" style="font-family: trueno">
+                    <div style="background-color: #1f53c5;width:90%;margin-left:5%;margin-top:1.5%;margin-bottom:2%;border-radius:12px" class="text-center">
+                        <h1 class="control-label" style="font-family:'calibri';font-size:300%;color:white"><strong>Actualiza tus datos</strong></h1>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Nombre:</strong></label>
+                    <div class="col-md-12" style="text-align:center">
+                        <input name="nombres" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Nombres" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Apellidos:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="apellidos" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Apellidos" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>DNI:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="dni" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Dni" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Fecha de Nacimiento:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="fechaNac" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.FechaN.ToString("dd-MM-yyyy")" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Correo:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="correo" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Correo" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Teléfono:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="telefono" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Telefono" />
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Contraseña:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <input name="passwd" type="password" class="control-label" style="font-size:110%;border-radius:7px;box-shadow:3px;width:70%;padding:1%" value="@ViewBag.Pass" />
+                    </div>
+                    <div class="form-group" style="padding-left:37%; padding-top:5%">
+                        <button href="/Cliente/Index" class="btn btn-primary" type="submit">
+                            <i class="fas fa-save"></i>   Guardar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,67 @@
+﻿
+@model DentoWebMVC.Models.DentoWeb.Historia
+
+@{ ViewData["Title"] = "DetalleCitaPaciente";
+    Layout = "_Layout";}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="mestrada">
+
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+</head>
+
+
+<body style="background-image: url(https://gacetadental.com/wp-content/uploads/2019/09/dentista-paciente-1280x720.jpg); background-size:cover;">
+    <div class="row">
+        <div class="container">
+            <form style="padding-left:30%;padding-right:30%">
+                <div class=" controls form-row">
+                    <h1 class="text-primary control-label" style="font-family:'calibri';font-size:300%; padding-left:10%"><strong>Detalle de Cita</strong></h1>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Código historia:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Paciente.codigo</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Paciente:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Paciente.nombres @ViewBag.Paciente.apellidos</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Doctor:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Doctor.nombres @ViewBag.Doctor.apellidos</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Fecha:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.cita.fecha</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Observación:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.observacion</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Motivo:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.motivo</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Exámenes:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.examenes</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Diagnóstico:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.diagnostico</label>
+                    </div>
+                    <label style="font-family:'calibri';font-size:150%; padding-left:3%"><strong>Tratamiento:</strong></label>
+                    <div class=" col-md-12" style="text-align:center">
+                        <label class="control-label" style="font-size:120%">@ViewBag.Historia.tratamiento</label>
+                    </div>
+                    <div class="form-group" style="padding-left:39%; padding-top:5%">
+                        <a href="/Cliente/Index" class="btn btn-primary">
+                            <i class="far fa-save"></i> Aceptar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

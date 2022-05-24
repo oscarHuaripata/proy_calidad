@@ -1,0 +1,94 @@
+﻿
+@{ ViewData["Title"] = "Index";
+                Layout = "_LayoutDoctor"; }
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+</head>
+
+<div class="text-center" style="background-color: #1f53c5;width:70%;border-radius:12px;box-shadow:10px;margin-left:15%;font-family:trueno">
+    <h1 style="margin-bottom:2%;color:white;padding:1%"><strong>Historial de Citas de @ViewBag.User.nombres @ViewBag.User.apellidos</strong></h1>
+</div>
+
+@if (TempData["CitasNull"] == null)
+{
+
+<table class="table table-hover" style="font-family: trueno" id="IndexDoctor">
+    <thead>
+        <tr class="text-center text-uppercase">
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Paciente</th>
+            <th>Estado</th>
+            <th></th>
+            <th></th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewBag.Citas)
+        {
+        <tr class="text-center">
+            <td>@item.fecha.ToShortDateString()</td>
+            <td>
+                @item.horario.horaInicio - @item.horario.horaFin
+            </td>
+            <td>
+                @item.cliente.nombres @item.cliente.apellidos
+            </td>
+            <td>
+
+                @if (item.estado == "PENDIENTE")
+                {
+                        <strong style="color:green">PENDIENTE</strong>}
+
+                @if (item.estado == "CANCELADA")
+                {
+                    <strong style="color:red">CANCELADA</strong>
+                }
+
+                @if (item.estado == "ATENDIDO")
+                {
+                    <strong style="color:cornflowerblue">ATENDIDA</strong>
+                 }
+            </td>
+            <td>
+                 @if (item.estado == "PENDIENTE")
+                  {
+                        <a href="/Doctor/CancelarCita?id=@item.idCita" class="btn btn-danger" style="margin-left:35px;">Cancelar cita</a>
+                  }
+                @if (item.estado == "ATENDIDO")
+                {
+                    <a href="/Doctor/DetalleCita?id=@item.idCita" class="btn btn-info" style="margin-left:42px;">Ver resultados</a>}
+            </td>
+            <td>
+                @if (item.estado == "PENDIENTE")
+                {
+                    <a href="/Doctor/AtenderCita?id=@item.idCita" class="btn btn-success" style="margin-left:20px;">Atender</a>
+                 }
+                @if(item.estado == "ATENDIDO" && item.pago=="true") {
+                     <a href="/Doctor/Boleta?id=@item.idCita" class="btn btn-warning">Ver Boleta</a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>}
+@if (TempData["CitasNull"] != null)
+{
+<button class="btn btn-danger">@TempData["CitasNull"]</button>}
+
+
+@section Scripts {
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+    <script type="text/javascript">$(document).ready(function () {
+            $('#IndexDoctor').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });</script>
+}

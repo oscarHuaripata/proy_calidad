@@ -1,0 +1,68 @@
+﻿
+@{ ViewData["Title"] = "CreateCita";
+    Layout = "_Layout";}
+
+<head>
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+</head>
+
+<body style="background-image: url(https://gacetadental.com/wp-content/uploads/2019/09/dentista-paciente-1280x720.jpg); background-size:cover;">
+    <div style="display: flex;
+        justify-content: center;
+        align-items: center">
+        <form method="post" action="/Cliente/CreateCita" class="form-register" style="margin-top:145px; margin-left:-80px;font-family:trueno">
+            <div style="margin-top:-10px; margin-bottom:30px;margin-left:40px;">
+                <div style="margin-bottom:-2px;border-radius:12px; width:260px; background-color:#1f53c5;padding:0.02px">
+                    <h1 class="text-center" style="margin-top:10px;margin-bottom:10px;"><strong>Separa tu Cita</strong></h1>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-1">
+                        <i style="margin-top:10px; font-size:25px;" class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="col-5">
+                        <input style="width:290px; margin-left:13px;" class="controls" name="fecha" type="date" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-1">
+                        <i style="margin-top:10px;font-size:25px;" class="fas fa-clock"></i>
+                    </div>
+                    <div class="col-5">
+                        <select style="width:290px; margin-left:13px;" class="controls" name="idhorario">
+                            @foreach (var item in ViewBag.Horarios)
+                            {
+                                <option value="@item.idHorario">@item.horaInicio - @item.horaFin</option>
+                            }
+                        </select>
+                        @Html.ValidationMessage("Error")
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom:-5px;">
+                <div class="row">
+                    <div class="col-1">
+                        <i style="margin-top:10px; font-size:25px;" class="fas fa-user-md"></i>
+                    </div>
+                    <div class="col-5">
+                        <select style="width:290px; margin-left:13px;" class="controls" name="iddoctor">
+                            @foreach (var item in ViewBag.Doctors)
+                            {
+                                <option value="@item.idDoctor">@item.nombres @item.apellidos</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="padding-top:4%">
+                <button class="btn btn-primary" type="submit"> <i class="fas fa-save"></i>   Guardar</button>
+                <a class="btn btn-danger" href="/Cliente/Index"><i class="fas fa-window-close"></i>   Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>

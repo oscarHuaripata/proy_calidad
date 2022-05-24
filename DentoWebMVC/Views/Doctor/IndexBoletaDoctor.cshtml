@@ -1,0 +1,97 @@
+﻿
+@model DentoWebMVC.Models.DentoWeb.Historia
+
+@{ ViewData["Title"] = "IndexBoletaDoctor";
+    Layout = "_LayoutDoctor";
+}
+
+
+<head>
+    <link rel="shortcut icon" href="~/images/icon.png" type="image/x-icon" />
+    <title>DentoWeb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DentoWebMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container" style="padding-top:2%">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div style="padding-left:9%;padding-top:-5%;padding-bottom:-10%" class="text-secondary">
+                        <span>Clínica DentoWeb S.A.</span><br />
+                        <span>Dirección: Jr. Los Eucaliptos 259</span><br />
+                        <span>Teléfono: (+51)912123123</span>
+                    </div>
+                </div>
+                <div class="col-lg-9" style="text-align:right;padding-right:5%">
+                    <h1 class="text-primary"><strong>Boleta de Venta Electrónica</strong></h1>
+                    <span class="text-secondary text-right">RUC: 85241094241</span><br />
+                    <span class="text-secondary text-right">N° @ViewBag.Historia.idCita</span>
+                </div>
+            </div>
+            <hr class=" bg-white border-bottom box-shadow mb-3" />
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" style="padding-left:6%">
+                <label class="text-primary" style="font-size:160%"><strong>Paciente:</strong></label>
+                <label class="text-secondary" style="font-size:130%">@ViewBag.Paciente.nombres @ViewBag.Paciente.apellidos</label><br />
+                <label class="text-primary" style="font-size:140%"><strong>DNI:</strong></label>
+                <label class="text-secondary" style="font-size:130%">@ViewBag.Paciente.dni</label>
+            </div>
+            <div class="col-lg-6 text-right" style="padding-right:8%">
+                <label class="text-primary" style="font-size:160%"><strong>Doctor:</strong></label>
+                <label class="text-secondary" style="font-size:130%">@ViewBag.Doctor.nombres @ViewBag.Doctor.apellidos</label><br />
+                <label class="text-primary" style="font-size:160%"><strong>Fecha:</strong></label>
+                <label class="text-secondary" style="font-size:130%">@DateTime.Now.ToShortDateString()</label><br />
+            </div>
+        </div>
+        <hr class=" bg-white border-bottom box-shadow mb-3" />
+        <div class="row" style="margin-bottom:-1%;margin-top:-.5%">
+            <div class="col-lg-6 text-center">
+                <label class="text-secondary" style="font-size:100%"><strong>Descripción</strong></label>
+            </div>
+            <div class="col-lg-6 text-center">
+                <label class="text-secondary" style="font-size:100%"><strong>Total</strong></label>
+            </div>
+        </div>
+        <hr class=" bg-white border-bottom box-shadow mb-3" />
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="text-secondary text-center">
+                    @ViewBag.Historia.descripcion
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="text-secondary text-center">
+                    @ViewBag.Cita.monto.ToString("N2")
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" style="padding-top:20%">
+                <p class="text-secondary" style="padding-left:30%">
+                    SU MONTO ES @ViewBag.Cita.monto.ToString("N2") SOLES.
+                </p>
+            </div>
+            <div class="col-lg-6" style="padding-top:20%">
+                <p class="text-secondary" style="padding-left:42%">
+                    TOTAL S/      @ViewBag.Cita.monto.ToString("N2")
+                </p>
+            </div>
+        </div>
+        <hr class=" bg-white border-bottom box-shadow mb-3" />
+        <div class="text-center">
+            <a class="btn btn-primary" href="/Doctor/Index">Regresar</a>
+        </div>
+    </div>
+</body>

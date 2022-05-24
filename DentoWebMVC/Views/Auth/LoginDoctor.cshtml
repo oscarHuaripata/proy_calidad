@@ -1,0 +1,28 @@
+﻿
+@{ ViewData["Title"] = "LoginDoctor"; }
+@{ Layout = null; }
+<head>
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+    <link rel="shortcut icon" href="~/images/icon.png" type="image/x-icon" />
+    <title>DentoWeb</title>
+</head>
+
+
+<body style="background-image: url(https://gacetadental.com/wp-content/uploads/2019/09/dentista-paciente-1280x720.jpg) ; background-size:cover;">
+    <div>
+        <form action="/auth/loginDoctor" method="post" class="form-register">
+            <div class="text-center" style="text-align:center">
+                <a asp-controller="Home" asp-action="Index"><img src="~/images/iso.png" width="270" height="39" style="margin-top:-7px; margin-bottom:25px;" /></a>
+            </div>
+            <span>@Html.ValidationMessage("Login")</span>
+
+            <input class="controls" type="text" name="username" id="nombres" placeholder="Usuario de Doctor" value="@ViewBag.username" />
+            <br />
+            <input class="controls" type="password" name="passwd" id="correo" placeholder="Contraseña" value="@ViewBag.passwd" />
+            <br />
+            <div class="text-center" style="text-align:center">
+                <button class="botons" type="submit" style="margin-bottom:-2px; margin-top:8px;border-radius:15px; width:150px;">Aceptar</button>
+            </div>
+        </form>
+    </div>
+</body>
